@@ -3,6 +3,8 @@ if(APPLE_FRAMEWORK)
   ocv_module_disable(freetype)
 endif()
 
+find_package(FREETYPE)
+find_package(HARFBUZZ)
 ocv_check_modules(FREETYPE freetype2)
 ocv_check_modules(HARFBUZZ harfbuzz)
 
