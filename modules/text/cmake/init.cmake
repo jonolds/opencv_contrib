@@ -21,7 +21,7 @@ if(NOT HAVE_TESSERACT
         "${OpenCV_BINARY_DIR}/cmake_check/tesseract"
         "${CMAKE_CURRENT_LIST_DIR}/checks/tesseract_test.cpp"
         CMAKE_FLAGS "-DINCLUDE_DIRECTORIES:STRING=${Tesseract_INCLUDE_DIRS}"
-        LINK_LIBRARIES ${Tesseract_LIBRARIES}
+        LINK_LIBRARIES Tesseract::libtesseract
         OUTPUT_VARIABLE TRY_OUT
         )
       if(NOT __VALID_TESSERACT)
